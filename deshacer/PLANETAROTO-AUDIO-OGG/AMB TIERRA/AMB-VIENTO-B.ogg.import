@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/AMB-VIENTO-B.ogg-d53b50c948139e4fa22d4f86fb131a9e.oggstr"
+
+[deps]
+
+source_file="res://deshacer/PLANETAROTO-AUDIO-OGG/AMB TIERRA/AMB-VIENTO-B.ogg"
+dest_files=[ "res://.import/AMB-VIENTO-B.ogg-d53b50c948139e4fa22d4f86fb131a9e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/robot_eyes_01.ogg-9f5ed206d823c8a2d01a482682ca0e6f.oggstr"
+
+[deps]
+
+source_file="res://sound/robot_eyes_01.ogg"
+dest_files=[ "res://.import/robot_eyes_01.ogg-9f5ed206d823c8a2d01a482682ca0e6f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

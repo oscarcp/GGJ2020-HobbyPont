@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX-ROBOT-OJOS03.ogg-8fbcfd79ad5a9c3b661ebb921f6f9c9d.oggstr"
+
+[deps]
+
+source_file="res://deshacer/PLANETAROTO-AUDIO-OGG/ROBOT/OJOS/FX-ROBOT-OJOS03.ogg"
+dest_files=[ "res://.import/FX-ROBOT-OJOS03.ogg-8fbcfd79ad5a9c3b661ebb921f6f9c9d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

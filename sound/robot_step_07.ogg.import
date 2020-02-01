@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/robot_step_07.ogg-ca0501603275f9cdafbe488888711c80.oggstr"
+
+[deps]
+
+source_file="res://sound/robot_step_07.ogg"
+dest_files=[ "res://.import/robot_step_07.ogg-ca0501603275f9cdafbe488888711c80.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

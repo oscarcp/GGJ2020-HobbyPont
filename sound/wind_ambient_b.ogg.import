@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wind_ambient_b.ogg-2aafc932d0fa4f4e38eaec721ddaa806.oggstr"
+
+[deps]
+
+source_file="res://sound/wind_ambient_b.ogg"
+dest_files=[ "res://.import/wind_ambient_b.ogg-2aafc932d0fa4f4e38eaec721ddaa806.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

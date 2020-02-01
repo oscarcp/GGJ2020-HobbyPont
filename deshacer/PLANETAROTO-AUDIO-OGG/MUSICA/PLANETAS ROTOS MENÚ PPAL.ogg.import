@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PLANETAS ROTOS MENÚ PPAL.ogg-1679c3a8b65baf49168471a8ab333106.oggstr"
+
+[deps]
+
+source_file="res://deshacer/PLANETAROTO-AUDIO-OGG/MUSICA/PLANETAS ROTOS MENÚ PPAL.ogg"
+dest_files=[ "res://.import/PLANETAS ROTOS MENÚ PPAL.ogg-1679c3a8b65baf49168471a8ab333106.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

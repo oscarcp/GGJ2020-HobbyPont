@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX-ROBOT-PASO06.ogg-1650cf5096486036dd74e1043951ba5a.oggstr"
+
+[deps]
+
+source_file="res://deshacer/PLANETAROTO-AUDIO-OGG/ROBOT/PASOS/FX-ROBOT-PASO06.ogg"
+dest_files=[ "res://.import/FX-ROBOT-PASO06.ogg-1650cf5096486036dd74e1043951ba5a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

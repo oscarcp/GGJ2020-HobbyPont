@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/player_cape_05.ogg-073d58074e13fc240b81d657ced535ab.oggstr"
+
+[deps]
+
+source_file="res://sound/player_cape_05.ogg"
+dest_files=[ "res://.import/player_cape_05.ogg-073d58074e13fc240b81d657ced535ab.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

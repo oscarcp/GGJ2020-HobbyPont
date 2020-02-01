@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX-ROBOT-METAL07.ogg-f0988b388b027e4212c19f8205b54451.oggstr"
+
+[deps]
+
+source_file="res://deshacer/PLANETAROTO-AUDIO-OGG/ROBOT/METAL/FX-ROBOT-METAL07.ogg"
+dest_files=[ "res://.import/FX-ROBOT-METAL07.ogg-f0988b388b027e4212c19f8205b54451.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

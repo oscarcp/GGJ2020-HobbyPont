@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/robot_noise_07.ogg-fe0579db86ca5c3b619dc80446b63ca2.oggstr"
+
+[deps]
+
+source_file="res://sound/robot_noise_07.ogg"
+dest_files=[ "res://.import/robot_noise_07.ogg-fe0579db86ca5c3b619dc80446b63ca2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

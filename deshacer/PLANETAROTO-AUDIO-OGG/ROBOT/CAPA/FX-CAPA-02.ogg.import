@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX-CAPA-02.ogg-df75c3e018094cbc74bd9f78acbf5607.oggstr"
+
+[deps]
+
+source_file="res://deshacer/PLANETAROTO-AUDIO-OGG/ROBOT/CAPA/FX-CAPA-02.ogg"
+dest_files=[ "res://.import/FX-CAPA-02.ogg-df75c3e018094cbc74bd9f78acbf5607.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
