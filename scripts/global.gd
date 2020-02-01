@@ -1,6 +1,4 @@
 # Global script of the game containing main functions and variables
-# Creator: Oscar Carballal Prego <oscar@oscarcp.com>
-# Last modification: 2016-10-18
 extends Node
 
 var current_scene = null

@@ -48,10 +48,10 @@ func _ready():
 	raycast_ground = get_node("RayCast2D")
 	raycast_ground.add_exception(self)
 
-	set_fixed_process(true)
+	set_physics_process(true)
 	set_applied_force(Vector2(0, extra_gravity))
 
-func _fixed_process(delta):
+func _physics_process(delta):
 	"""Main loopwhere our custom code runs"""
 	# States
 	PLAYERSTATE_PREV = PLAYERSTATE
