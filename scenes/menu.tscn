@@ -1,3 +1,102 @@
-[gd_scene format=2]
+[gd_scene load_steps=12 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://scenes/Menu Principal.gd" type="Script" id=1]
+[ext_resource path="res://img/iconos/créditos icono.png" type="Texture" id=2]
+[ext_resource path="res://img/iconos/boton de play 1.png" type="Texture" id=3]
+[ext_resource path="res://img/iconos/piedra icono.png" type="Texture" id=4]
+[ext_resource path="res://img/fondos/fondo título.png" type="Texture" id=5]
+[ext_resource path="res://img/iconos/título.png" type="Texture" id=6]
+[ext_resource path="res://sound/menu.ogg" type="AudioStream" id=7]
+[ext_resource path="res://sound/player_cape_01.ogg" type="AudioStream" id=8]
+[ext_resource path="res://img/iconos/salir icono.png" type="Texture" id=9]
+[ext_resource path="res://scenes/menu.gd" type="Script" id=10]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[node name="World2d" type="Node2D"]
+position = Vector2( 0, 1.10803 )
+script = ExtResource( 10 )
+
+[node name="Fondo" type="Sprite" parent="."]
+position = Vector2( 640, 360.504 )
+texture = ExtResource( 5 )
+
+[node name="roca izq" type="Sprite" parent="."]
+position = Vector2( 672.055, 739.088 )
+texture = ExtResource( 4 )
+
+[node name="roca derecha" type="Sprite" parent="."]
+position = Vector2( 1648.32, 736.71 )
+texture = ExtResource( 4 )
+
+[node name="Titulo" type="Sprite" parent="."]
+position = Vector2( 632, 202.004 )
+texture = ExtResource( 6 )
+
+[node name="Menu Principal" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Creditos" type="Button" parent="Menu Principal"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 55.1213
+margin_top = 351.79
+margin_right = 1354.13
+margin_bottom = 951.79
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Salir" type="Button" parent="Menu Principal"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 1057.23
+margin_top = 340.996
+margin_right = 2363.23
+margin_bottom = 961.996
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jugar" type="Button" parent="Menu Principal"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 496.0
+margin_top = 416.0
+margin_right = 860.0
+margin_bottom = 696.0
+icon = ExtResource( 3 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles2D" type="CPUParticles2D" parent="."]
+visible = false
+material = SubResource( 1 )
+
+[node name="musica de fondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+
+[node name="mouseover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+[connection signal="pressed" from="Menu Principal/Creditos" to="Menu Principal" method="_on_Creditos_pressed"]
+[connection signal="pressed" from="Menu Principal/Salir" to="Menu Principal" method="_on_Salir_pressed"]
+[connection signal="mouse_entered" from="Menu Principal/jugar" to="." method="_on_jugar_mouse_entered"]
+[connection signal="pressed" from="Menu Principal/jugar" to="Menu Principal" method="_on_jugar_pressed"]

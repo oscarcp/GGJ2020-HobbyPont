@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/plataforma Tierra recuperada 1.png-871830b5296eea88dd1b626ee9ab7dac.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://img/plataformas/plataforma Tierra recuperada 1.png"
+dest_files=[ "res://.import/plataforma Tierra recuperada 1.png-871830b5296eea88dd1b626ee9ab7dac.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

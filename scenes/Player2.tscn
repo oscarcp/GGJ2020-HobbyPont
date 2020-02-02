@@ -667,26 +667,21 @@ tracks/14/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 4
 script = ExtResource( 9 )
-speed = Vector2( 100, 1000 )
-velocity = Vector2( 100, 0 )
 
 [node name="arm_back" type="Sprite" parent="."]
-position = Vector2( 71.679, -37.6777 )
-rotation = 0.144271
+position = Vector2( 72.0682, -43.0059 )
 texture = ExtResource( 2 )
 offset = Vector2( -45.2174, 45.7255 )
 
 [node name="leg_back" type="Sprite" parent="."]
-position = Vector2( 27.7605, 107.517 )
-rotation = 0.144271
-scale = Vector2( 0.988535, 0.988535 )
+position = Vector2( 49.4807, 106.994 )
 texture = ExtResource( 6 )
 offset = Vector2( -25.9508, -107.313 )
 
 [node name="torso" type="Sprite" parent="."]
 position = Vector2( 35.0056, -43.0349 )
-rotation = 0.144271
 texture = ExtResource( 7 )
 offset = Vector2( -18.264, 49.014 )
 __meta__ = {
@@ -722,7 +717,6 @@ __meta__ = {
 
 [node name="leg_front" type="Sprite" parent="torso"]
 position = Vector2( -19.273, 158.449 )
-scale = Vector2( 0.795531, 0.795531 )
 texture = ExtResource( 8 )
 offset = Vector2( 4.92307, -115.399 )
 __meta__ = {
@@ -755,7 +749,6 @@ __meta__ = {
 
 [node name="remote_leg_back" type="RemoteTransform2D" parent="torso"]
 position = Vector2( 14.4751, 150.029 )
-scale = Vector2( 0.988535, 0.988535 )
 remote_path = NodePath("../../leg_back")
 __meta__ = {
 "_edit_bone_": true
@@ -772,7 +765,6 @@ anims/first_position = SubResource( 1 )
 anims/walk = SubResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
 position = Vector2( -75, -101 )
 polygon = PoolVector2Array( 104.026, -114.234, 46.6267, -105.863, 8.36023, -58.0302, 4.77277, 10.132, 66.9558, 26.8736, 31.081, 67.5318, 33.4727, 90.2525, -78.9352, 295.935, 35.8643, 356.922, 47.8226, 382.035, 64.5641, 388.014, 155.447, 386.818, 197.301, 334.201, 161.426, 75.9026, 143.489, 32.8528, 174.58, 23.2861, 182.951, -52.051, 166.21, -103.472 )
 

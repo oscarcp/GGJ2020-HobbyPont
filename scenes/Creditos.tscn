@@ -1,0 +1,248 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Creditos.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "historia"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Producción ejecutiva:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -327.279, 172.076 ), Vector2( 27.6931, 169.558 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("programacion:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1233.59, 203.465 ), Vector2( 787.988, 175.773 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Ilustracion y Diseño:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -931.487, 323.145 ), Vector2( 25.1753, 300.487 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Música y sonido:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1331.77, 425.146 ), Vector2( 22.6577, 432.698 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Historia:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1.4, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -716.493, 587.894 ), Vector2( 26.1796, 577.824 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Animaciones:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1.8, 2.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1251.21, 603.542 ), Vector2( 641.971, 595.989 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 90.8829, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 149.548 ],
+"_edit_vertical_guides_": [ 87.6288, 349.125, 650.592, 900.744 ]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+method_call_mode = 1
+anims/historia = SubResource( 1 )
+
+[node name="Historia" type="Label" parent="."]
+margin_left = -716.493
+margin_top = 587.894
+margin_right = -631.493
+margin_bottom = 643.894
+text = "Historia
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="David Jamardo" type="Label" parent="Historia"]
+margin_left = 87.5346
+margin_top = 46.5374
+margin_right = 247.535
+margin_bottom = 102.537
+text = "David Jamardo
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Guillermo Gómez" type="Label" parent="Historia"]
+margin_left = 359.003
+margin_top = 47.6454
+margin_right = 550.003
+margin_bottom = 72.6454
+text = "Guillermo Gómez"
+
+[node name="Ilustracion y Diseño" type="Label" parent="."]
+margin_left = -931.487
+margin_top = 323.145
+margin_right = -717.487
+margin_bottom = 348.145
+text = "Ilustración y Diseño"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Laura Loulahey" type="Label" parent="Ilustracion y Diseño"]
+margin_left = 88.6427
+margin_top = 42.1053
+margin_right = 254.643
+margin_bottom = 67.1053
+text = "Laura Loulahey"
+
+[node name="Ramón Torres" type="Label" parent="Ilustracion y Diseño"]
+margin_left = 352.355
+margin_top = 42.1053
+margin_right = 506.355
+margin_bottom = 67.1053
+text = "Ramón Torres"
+
+[node name="Raquel Besteiro" type="Label" parent="Ilustracion y Diseño"]
+margin_left = 652.987
+margin_top = 42.1053
+margin_right = 822.987
+margin_bottom = 67.1053
+text = "Raquel Besteiro"
+
+[node name="Música y sonido" type="Label" parent="."]
+margin_left = 1331.77
+margin_top = 425.146
+margin_right = 1504.77
+margin_bottom = 450.146
+text = "Música y sonido"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Alejandro Alonso" type="Label" parent="Música y sonido"]
+margin_left = 91.4205
+margin_top = 35.1618
+margin_right = 276.421
+margin_bottom = 60.1618
+text = "Alejandro Alonso"
+
+[node name="Emilio García" type="Label" parent="Música y sonido"]
+margin_left = 351.617
+margin_top = 35.1618
+margin_right = 494.617
+margin_bottom = 60.1618
+text = "Emilio García"
+
+[node name="Gonzalo Maceira" type="Label" parent="Música y sonido"]
+margin_left = 655.508
+margin_top = 35.1618
+margin_right = 837.508
+margin_bottom = 60.1618
+text = "Gonzalo Maceira"
+
+[node name="Iñaki Turbo" type="Label" parent="Música y sonido"]
+margin_left = 902.726
+margin_top = 35.1618
+margin_right = 1027.73
+margin_bottom = 60.1618
+text = "Iñaki Turbo"
+
+[node name="programacion" type="Label" parent="."]
+margin_left = 1233.59
+margin_top = 203.465
+margin_right = 1387.59
+margin_bottom = 228.465
+text = "Programación"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Óscar Carballal" type="Label" parent="programacion"]
+margin_left = 90.6312
+margin_top = 40.2805
+margin_right = 254.631
+margin_bottom = 65.2805
+text = "Óscar Carballal"
+
+[node name="Animaciones" type="Label" parent="."]
+margin_left = 1251.21
+margin_top = 603.542
+margin_right = 1390.21
+margin_bottom = 628.542
+text = "Animaciones"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jorge Saltimbanki" type="Label" parent="Animaciones"]
+margin_left = 88.1136
+margin_top = 35.2455
+margin_right = 278.114
+margin_bottom = 60.2455
+text = "Jorge Saltimbanki"
+
+[node name="Diego RoCo" type="Label" parent="Animaciones"]
+margin_left = 354.972
+margin_top = 35.2455
+margin_right = 478.972
+margin_bottom = 60.2455
+text = "Diego RoCo"
+
+[node name="Producción ejecutiva" type="Label" parent="."]
+margin_left = -327.279
+margin_top = 172.076
+margin_right = -103.279
+margin_bottom = 197.076
+text = "Special Thanks"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Marcelo Rodríguez" type="Label" parent="Producción ejecutiva"]
+margin_left = 90.6312
+margin_top = 40.2805
+margin_right = 292.631
+margin_bottom = 65.2805
+text = "Marcelo Rodríguez"
+[connection signal="ready" from="AnimationPlayer" to="." method="_on_AnimationPlayer_ready"]
