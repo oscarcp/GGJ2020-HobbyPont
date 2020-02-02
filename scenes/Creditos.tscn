@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Creditos.gd" type="Script" id=1]
+[ext_resource path="res://sound/credits.wav" type="AudioStream" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "historia"
@@ -245,4 +246,8 @@ margin_top = 40.2805
 margin_right = 292.631
 margin_bottom = 65.2805
 text = "Marcelo Rodríguez"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
 [connection signal="ready" from="AnimationPlayer" to="." method="_on_AnimationPlayer_ready"]

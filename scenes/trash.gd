@@ -7,5 +7,6 @@ func _ready() -> void:
 
 
 func _on_Area2D_body_entered(body: Node) -> void:
-	if body == get_node("/root/World/robo/KinematicBody2D"):
+	if body == get_node("/root/World/robo/KinematicBody2D") and not collected:
 		get_node("AnimationPlayer").play("dissapear")
+		collected = 1

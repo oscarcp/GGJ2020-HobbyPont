@@ -669,6 +669,8 @@ tracks/14/keys = {
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 4
 script = ExtResource( 9 )
+MAX_SPEED = 256
+GRAVITY = 500
 
 [node name="arm_back" type="Sprite" parent="."]
 position = Vector2( 72.0682, -43.0059 )
