@@ -1,0 +1,544 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scripts/player.gd" type="Script" id=1]
+[ext_resource path="res://img/player/túnica robot.png" type="Texture" id=2]
+[ext_resource path="res://img/player/pierna delante.png" type="Texture" id=3]
+[ext_resource path="res://img/player/pierna detras .png" type="Texture" id=6]
+[ext_resource path="res://img/player/cuerpo robot .png" type="Texture" id=8]
+[ext_resource path="res://img/player/cabeza robot ojos entreabiertos .png" type="Texture" id=9]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Aterrizar"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Cadera/torso/Cabeza:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 17.4235, 17.4235, -3.14332 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Cadera/pierna izq:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 8.48645, 20.1107, 8.48645 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Cadera/pierna der:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 11.9195, 18.2856, 11.9195 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Cadera/torso:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 13.9476, -204.552 ), Vector2( 13.9476, -155.098 ), Vector2( 13.9476, -204.552 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skeleton2D/Cadera/torso:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 7.7518, 7.7518, 7.7518 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Bajando"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Cadera/torso/Cabeza:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 17.4235, 17.4235 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Cadera/pierna izq:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 8.48645, 20.1107, 8.48645 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Cadera/pierna der:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 11.9195, 18.2856, 11.9195 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Caminando"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Cadera/pierna izq:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 72.1293, 29.4955 ), Vector2( 74.521, 10.3623 ), Vector2( 72.1293, 29.4955 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Cadera/pierna der:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -106.001, 19.5266 ), Vector2( -106.001, -13.9565 ), Vector2( -106.001, 19.5266 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Cadera/torso:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 7.7518 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Cadera/torso/Cabeza:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -9.57635 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skeleton2D/Cadera/torso/Cabeza:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 6.90048, -89.7048 ), Vector2( 7.33936, -86.481 ), Vector2( 6.90048, -89.7048 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Cadera/pierna izq:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 72.1293, 29.4955 ), Vector2( 74.521, 10.3623 ), Vector2( 72.1293, 29.4955 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Cadera/pierna der:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -106.001, 19.5266 ), Vector2( -106.001, -13.9565 ), Vector2( -106.001, 19.5266 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Cadera/torso:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -0.134334, 7.7518 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Cadera/torso/Cabeza:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -4.58705, -9.20402, -9.57635 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Empezar saltar"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Cadera/torso/Cabeza:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -4.58705, -4.58705, -29.615 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Cadera/torso:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 13.9476, -159.002 ), Vector2( 13.9476, -142.734 ), Vector2( 13.9476, -204.552 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Frenar"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Cadera/pierna izq:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 72.1293, 29.4955 ), Vector2( 74.521, 10.3623 ), Vector2( 72.1293, 29.4955 ), Vector2( 72.1293, 29.4955 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Cadera/pierna der:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -106.001, 19.5266 ), Vector2( -106.001, -13.9565 ), Vector2( -106.001, 19.5266 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Cadera/torso:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 7.7518, -0.134334 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skeleton2D/Cadera/torso/Cabeza:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -9.20402, -9.57635, -4.58705 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "empezar a bajar"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Cadera/torso/Cabeza:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -29.615, 17.4235 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Cadera/pierna izq:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 8.48645, 20.1107, 8.48645 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Cadera/pierna der:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 11.9195, 18.2856, 11.9195 ]
+}
+
+[sub_resource type="Animation" id=8]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Cadera/torso/Cabeza:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -4.58705, -11.1321, 2.701, -4.58705 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Cadera:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 431.398, 299.872 ), Vector2( 431.398, 285.925 ), Vector2( 431.398, 299.872 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "saltando"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skeleton2D/Cadera/torso/Cabeza:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -29.615, -26.9226, -30.7431, -21.1313, -29.615 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skeleton2D/Cadera/pierna izq:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 8.48645, 20.1107, 8.48645 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skeleton2D/Cadera/pierna der:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 11.9195, 18.2856, 11.9195 ]
+}
+
+[sub_resource type="StreamTexture" id=10]
+flags = 4
+
+[node name="Player" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Aterrizar = SubResource( 1 )
+anims/Bajando = SubResource( 2 )
+anims/Caminando = SubResource( 3 )
+"anims/Empezar a caminar" = SubResource( 4 )
+"anims/Empezar saltar" = SubResource( 5 )
+anims/Frenar = SubResource( 6 )
+"anims/empezar a bajar" = SubResource( 7 )
+anims/idle = SubResource( 8 )
+anims/saltando = SubResource( 9 )
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+visible = false
+position = Vector2( -4.0448, 1.39474 )
+
+[node name="Cadera" type="Bone2D" parent="Skeleton2D"]
+position = Vector2( 431.398, 298.855 )
+rest = Transform2D( 1, 0, 0, 1, 431.398, 299.872 )
+
+[node name="torso" type="Bone2D" parent="Skeleton2D/Cadera"]
+position = Vector2( 13.9476, -204.552 )
+rotation = 0.135294
+rest = Transform2D( 1, 0, 0, 1, 13.9476, -159.002 )
+
+[node name="Hombro izq" type="Bone2D" parent="Skeleton2D/Cadera/torso"]
+position = Vector2( 76.9127, 15.1502 )
+rotation = -0.201041
+rest = Transform2D( 1, 0, 0, 1, 66.9482, -5.57901 )
+
+[node name="mano izq" type="Bone2D" parent="Skeleton2D/Cadera/torso/Hombro izq"]
+position = Vector2( 43.4385, 235.517 )
+rest = Transform2D( 1, 0, 0, 1, 19.5266, 237.108 )
+
+[node name="Hombro der" type="Bone2D" parent="Skeleton2D/Cadera/torso"]
+position = Vector2( -138.595, 5.72589 )
+rotation = 0.315475
+rest = Transform2D( 1, 0, 0, 1, -100.422, 2.78955 )
+
+[node name="mano der" type="Bone2D" parent="Skeleton2D/Cadera/torso/Hombro der"]
+position = Vector2( -13.9476, 267.793 )
+rest = Transform2D( 1, 0, 0, 1, -13.9476, 267.793 )
+
+[node name="Cabeza" type="Bone2D" parent="Skeleton2D/Cadera/torso"]
+position = Vector2( 7.33416, -86.5192 )
+rotation = -0.0548613
+rest = Transform2D( 1, 0, 0, 1, -75.3167, -80.8958 )
+default_length = 150.0
+
+[node name="pierna izq" type="Bone2D" parent="Skeleton2D/Cadera"]
+position = Vector2( 72.8491, 23.7376 )
+rotation = 0.148117
+rest = Transform2D( 1, 0, 0, 1, 69.756, 5.579 )
+
+[node name="pie izquierdo" type="Bone2D" parent="Skeleton2D/Cadera/pierna izq"]
+position = Vector2( -16.7371, 217.582 )
+rotation = -0.0162224
+rest = Transform2D( 1, 0, 0, 1, -16.7371, 217.582 )
+
+[node name="pierna der" type="Bone2D" parent="Skeleton2D/Cadera"]
+position = Vector2( -106.001, 13.4808 )
+rotation = 0.208034
+rest = Transform2D( 1, 0, 0, 1, -106.001, 19.5266 )
+
+[node name="pie derecho" type="Bone2D" parent="Skeleton2D/Cadera/pierna der"]
+position = Vector2( 33.4741, 198.055 )
+rest = Transform2D( 1, 0, 0, 1, 33.4741, 198.055 )
+
+[node name="ECO" type="Node2D" parent="."]
+
+[node name="Cuerpo" type="Polygon2D" parent="ECO"]
+position = Vector2( -219.452, -215.997 )
+texture = ExtResource( 8 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 616.949, 255.932, 657.627, 266.102, 720.339, 247.458, 716.949, 291.525, 740.678, 344.068, 716.949, 403.39, 718.644, 483.051, 667.797, 518.644, 615.254, 510.17, 581.356, 464.407, 601.695, 408.475, 583.051, 347.458 )
+uv = PoolVector2Array( 616.949, 255.932, 657.627, 266.102, 720.339, 247.458, 716.949, 291.525, 740.678, 344.068, 716.949, 403.39, 718.644, 483.051, 667.797, 518.644, 615.254, 510.17, 581.356, 464.407, 601.695, 408.475, 583.051, 347.458 )
+bones = [ NodePath("Cadera"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso"), PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ), NodePath("Cadera/torso/Hombro izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq/mano izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der/mano der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Cabeza"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq/pie izquierdo"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der/pie derecho"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="Pierna Detras" type="Polygon2D" parent="ECO"]
+position = Vector2( -216.361, -221.144 )
+rotation = -0.00169111
+texture = ExtResource( 6 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 620.339, 472.881, 662.712, 477.966, 705.085, 454.237, 694.915, 645.763, 659.322, 659.322 )
+uv = PoolVector2Array( 620.339, 472.881, 662.712, 477.966, 705.085, 454.237, 694.915, 645.763, 659.322, 659.322 )
+bones = [ NodePath("Cadera"), PoolRealArray( 0, 0, 0, 0, 0 ), NodePath("Cadera/torso"), PoolRealArray( 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq"), PoolRealArray( 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq/mano izq"), PoolRealArray( 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der"), PoolRealArray( 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der/mano der"), PoolRealArray( 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Cabeza"), PoolRealArray( 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq"), PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5 ), NodePath("Cadera/pierna izq/pie izquierdo"), PoolRealArray( 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der"), PoolRealArray( 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der/pie derecho"), PoolRealArray( 0, 0, 0, 0, 0 ) ]
+
+[node name="Pierna Delante" type="Polygon2D" parent="ECO"]
+position = Vector2( -230.117, -220.379 )
+rotation = -0.00349134
+texture = ExtResource( 3 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 596.61, 440.678, 637.288, 472.881, 681.356, 481.356, 640.678, 664.407, 610.169, 662.712, 586.441, 522.034 )
+uv = PoolVector2Array( 596.61, 440.678, 637.288, 472.881, 681.356, 481.356, 640.678, 664.407, 610.169, 662.712, 586.441, 522.034 )
+bones = [ NodePath("Cadera"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq/mano izq"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der/mano der"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Cabeza"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq/pie izquierdo"), PoolRealArray( 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der"), PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ), NodePath("Cadera/pierna der/pie derecho"), PoolRealArray( 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="Tunica" type="Polygon2D" parent="ECO"]
+position = Vector2( -219.186, -219.186 )
+texture = ExtResource( 2 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 605.085, 259.322, 659.322, 286.441, 725.424, 266.102, 801.695, 594.915, 720.339, 642.373, 549.153, 613.559, 442.373, 550.847, 547.458, 425.424 )
+uv = PoolVector2Array( 605.085, 259.322, 659.322, 286.441, 725.424, 266.102, 801.695, 594.915, 720.339, 642.373, 549.153, 613.559, 442.373, 550.847, 547.458, 425.424 )
+bones = [ NodePath("Cadera"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso"), PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ), NodePath("Cadera/torso/Hombro izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq/mano izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der/mano der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Cabeza"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq/pie izquierdo"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der/pie derecho"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="Cabeza" type="Polygon2D" parent="ECO"]
+position = Vector2( -296.375, -220.918 )
+texture = ExtResource( 6 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 672.881, 3.38983, 711.864, 115.254, 749.153, 157.627, 772.881, 315.254, 676.271, 320.339, 525.424, 293.22, 538.983, 142.373, 625.424, 111.864, 640.678, 45.7627 )
+uv = PoolVector2Array( 672.881, 3.38983, 711.864, 115.254, 749.153, 157.627, 772.881, 315.254, 676.271, 320.339, 525.424, 293.22, 538.983, 142.373, 625.424, 111.864, 640.678, 45.7627 )
+bones = [ NodePath("Cadera"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq/mano izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der/mano der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Cabeza"), PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ), NodePath("Cadera/pierna izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq/pie izquierdo"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der/pie derecho"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="cabeza robot ojos cerrados" type="Polygon2D" parent="ECO"]
+visible = false
+position = Vector2( -232.208, -190.844 )
+rotation = -0.0622697
+texture = SubResource( 10 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 676.271, 10.1695, 703.39, 59.3221, 701.695, 123.729, 761.017, 162.712, 764.407, 313.559, 562.712, 301.695, 549.153, 249.153, 579.661, 145.763, 633.898, 118.644, 635.593, 77.9661 )
+uv = PoolVector2Array( 676.271, 10.1695, 703.39, 59.3221, 701.695, 123.729, 761.017, 162.712, 764.407, 313.559, 562.712, 301.695, 549.153, 249.153, 579.661, 145.763, 633.898, 118.644, 635.593, 77.9661 )
+bones = [ NodePath("Cadera"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq/mano izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der/mano der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Cabeza"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq/pie izquierdo"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der/pie derecho"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="cabeza ojos entrecerrados" type="Polygon2D" parent="ECO"]
+position = Vector2( -295.64, -222.134 )
+texture = ExtResource( 9 )
+skeleton = NodePath("../../Skeleton2D")
+polygon = PoolVector2Array( 661.194, 22.3881, 716.418, 67.1642, 716.418, 122.388, 779.104, 176.119, 804.478, 258.209, 767.164, 282.09, 762.687, 313.433, 659.701, 325.373, 555.224, 289.552, 558.209, 177.612, 637.313, 117.91, 638.806, 37.3134 )
+uv = PoolVector2Array( 661.194, 22.3881, 716.418, 67.1642, 716.418, 122.388, 779.104, 176.119, 804.478, 258.209, 767.164, 282.09, 762.687, 313.433, 659.701, 325.373, 555.224, 289.552, 558.209, 177.612, 637.313, 117.91, 638.806, 37.3134 )
+bones = [ NodePath("Cadera"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro izq/mano izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Hombro der/mano der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/torso/Cabeza"), PoolRealArray( 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5 ), NodePath("Cadera/pierna izq"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna izq/pie izquierdo"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Cadera/pierna der/pie derecho"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]

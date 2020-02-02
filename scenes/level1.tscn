@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://img/parallax/plano 4.png" type="Texture" id=1]
+[ext_resource path="res://img/parallax/plano 3.png" type="Texture" id=2]
+[ext_resource path="res://img/parallax/fondo.png" type="Texture" id=3]
+[ext_resource path="res://img/parallax/fondo primer plano.png" type="Texture" id=5]
+[ext_resource path="res://scenes/Player2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://components/platform_basic.tscn" type="PackedScene" id=7]
+[ext_resource path="res://sound/level1.ogg" type="AudioStream" id=8]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 824 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 100, 24 )
+
+[node name="World" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Wall_invisible1" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2( 64, 457.5 )
+shape = SubResource( 2 )
+
+[node name="invisible_ground" type="Sprite" parent="."]
+position = Vector2( 1176, 640 )
+scale = Vector2( 11.78, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="invisible_ground"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="invisible_ground/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1280, 0 )
+
+[node name="Sky" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="parallaxbg1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.75, 0.75 )
+motion_mirroring = Vector2( 1280, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/parallaxbg1"]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="parallaxbg2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.85, 0.85 )
+motion_mirroring = Vector2( 1280, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/parallaxbg2"]
+texture = ExtResource( 3 )
+centered = false
+
+[node name="parallaxfront1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1280, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/parallaxfront1"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 352, 552 )
+scale = Vector2( 0.158429, 0.158429 )
+collision_mask = 4
+speed = Vector2( 250, 1000 )
+
+[node name="Node2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 464, 360 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 128, 481.5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
